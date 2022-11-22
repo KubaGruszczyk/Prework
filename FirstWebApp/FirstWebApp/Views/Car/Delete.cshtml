@@ -1,0 +1,38 @@
+﻿@model FirstWebApp.Models.Car
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Usuń Samochód z garażu</h1>
+
+<h3>Jesteś Pewny, że chcesz usunać ten samochód???</h3>
+<div>
+    <h4>CarsModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CarModel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CarName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.YearOfProduction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YearOfProduction)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Wróć do strony głównej</a>
+    </form>
+</div>
